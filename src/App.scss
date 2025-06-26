@@ -1,0 +1,73 @@
+// 变量定义
+$primary-blue: #3498db;
+$dark-bg-1: #1a1a2e;
+$dark-bg-2: #16213e;
+$wall-color: #7f8c8d;
+$wall-border: #95a5a6;
+$text-muted: #bdc3c7;
+$player-glow: rgba(231, 76, 60, 0.5);
+$canvas-glow: rgba(52, 152, 219, 0.3);
+$border-light: rgba(255, 255, 255, 0.1);
+
+// 主应用容器
+.App {
+  text-align: center;
+  padding: 20px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, $dark-bg-1, $dark-bg-2);
+  color: #fff;
+}
+
+// 游戏容器
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+// 游戏画布
+.game-canvas {
+  box-shadow: 0 0 20px $canvas-glow;
+}
+
+// 瓦片基础样式
+.tile {
+  border: 1px solid $border-light;
+  
+  &.wall {
+    background-color: $wall-color;
+    border-color: $wall-border;
+  }
+  
+  &.empty {
+    background-color: transparent;
+  }
+}
+
+// 玩家样式
+.player {
+  transition: all 0.1s ease;
+  box-shadow: 0 0 10px $player-glow;
+}
+
+// 说明文字容器
+.instructions {
+  background: rgba($primary-blue, 0.1);
+  padding: 15px 25px;
+  border-radius: 8px;
+  border: 1px solid $primary-blue;
+  
+  p {
+    margin: 0;
+    font-size: 16px;
+    color: $text-muted;
+  }
+}
+
+// 标题样式
+h1 {
+  color: $primary-blue;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 30px;
+} 
